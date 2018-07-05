@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 
 class LibraryList extends Component {
   render() {
+    console.log(this.props);
     return;
   }
 }
 
-export default connect()(LibraryList);
+const mapStateToProps = state => {
+  return { libraries: state.libraries };
+};
 
-//the one and only way in which we reach into our redux state and acess some amount of data
-//use a connect helper to access some piece of data
+export default connect(mapStateToProps)(LibraryList);
