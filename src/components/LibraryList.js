@@ -11,7 +11,7 @@ class LibraryList extends Component {
 
   render() {
     return (
-      < FlatList
+      <FlatList
         data={this.props.libraries}
         renderItem={this.renderItem}
         keyExtractor={(library) => library.id}
@@ -20,8 +20,6 @@ class LibraryList extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return { libraries: state.libraries };
-};
+const mapStateToProps = state => ({ libraries: state.libraries });
 
 export default connect(mapStateToProps)(LibraryList);
