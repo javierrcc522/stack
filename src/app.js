@@ -10,7 +10,7 @@ const App = () => {
   return (
     //provider can only have one child subcompoenets can have as many components
     <Provider store={createStore(reducers)}>
-      <View>
+      <View style={{ flex: 1 }}>
         <Header headerWords="Tech Stack" />
         <LibraryList />
       </View>
